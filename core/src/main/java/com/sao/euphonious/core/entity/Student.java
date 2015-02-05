@@ -3,13 +3,14 @@ package com.sao.euphonious.core.entity;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by navia on 2015/2/5.
  */
 @Entity
 @Table(name = "student")
-public class Student {
+public class Student implements Serializable {
     private Integer id;
     private Integer age;
     private String name;

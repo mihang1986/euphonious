@@ -1,11 +1,9 @@
 package com.sao.euphonious.core.dao;
 
+import com.sao.euphonious.core.dao.util.BaseDao;
 import com.sao.euphonious.core.entity.Student;
-import org.hibernate.SessionFactory;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -13,7 +11,7 @@ import java.util.List;
  */
 
 @Repository
-public class StudentDao extends BaseDao implements IStudentDao{
+public class StudentDao extends BaseDao<Student> implements IStudentDao{
     @Override
     public List<Student> findByAll() {
         return getCurrentSession().createQuery("from Student").list();
