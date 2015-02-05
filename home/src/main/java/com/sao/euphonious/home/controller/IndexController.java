@@ -1,5 +1,6 @@
 package com.sao.euphonious.home.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -12,9 +13,13 @@ import javax.servlet.http.HttpServletResponse;
  */
 @Controller
 public class IndexController {
+    private static Logger logger = Logger.getLogger(IndexController.class);
+
 
    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String index(HttpServletRequest req, HttpServletResponse rsp){
+
+        logger.debug("fdsa");
        req.setAttribute("test", "caonima");
         return "index";
     }

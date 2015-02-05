@@ -10,6 +10,10 @@
           <element id="archive" name="core-1.0.0.jar">
             <element id="module-output" name="core" />
           </element>
+          <element id="archive" name="log-1.0.0.jar">
+            <element id="module-output" name="log" />
+          </element>
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.1.4.RELEASE" />

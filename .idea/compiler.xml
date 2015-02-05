@@ -24,6 +24,7 @@
         <processorPath useClasspath="true" />
         <module name="core" />
         <module name="home" />
+        <module name="log" />
       </profile>
     </annotationProcessing>
   </component>

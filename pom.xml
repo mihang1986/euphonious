@@ -11,11 +11,13 @@
     <modules>
         <module>core</module>
         <module>home</module>
+        <module>log</module>
     </modules>
 
 
     <properties>
         <core.version>1.0.0</core.version>
         <home.version>1.0.0</home.version>
+        <log.version>1.0.0</log.version>
     </properties>
 </project>
