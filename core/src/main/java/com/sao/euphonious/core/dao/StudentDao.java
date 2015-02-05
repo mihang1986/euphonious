@@ -10,7 +10,7 @@ import java.util.List;
  * Created by navia on 2015/2/5.
  */
 
-@Repository
+@Repository(value = "studentDao")
 public class StudentDao extends BaseDao<Student> implements IStudentDao{
     @Override
     public List<Student> findByAll() {

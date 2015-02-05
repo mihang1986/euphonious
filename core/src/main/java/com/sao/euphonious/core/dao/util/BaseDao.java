@@ -5,6 +5,7 @@ import com.sao.euphonious.core.dao.util.IOperations;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 
+
 import javax.annotation.Resource;
 import java.io.Serializable;
 import java.util.List;
@@ -13,10 +14,10 @@ import java.util.List;
  * Created by navia on 2015/2/5.
  */
 public abstract class BaseDao<T extends Serializable> implements IOperations<T> {
+    private Class<T> clazz;
+
     @Resource(name="sessionFactory")
     private SessionFactory sessionFactory;
-
-    private Class<T> clazz;
 
     protected final void setClazz(final Class<T> clazzToSet) {
         this.clazz = Preconditions.checkNotNull(clazzToSet);
@@ -63,4 +64,5 @@ public abstract class BaseDao<T extends Serializable> implements IOperations<T> 
         Preconditions.checkState(entity != null);
         delete(entity);
     }
+
 }

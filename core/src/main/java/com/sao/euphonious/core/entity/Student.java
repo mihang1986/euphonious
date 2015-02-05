@@ -11,8 +11,15 @@ import java.io.Serializable;
 @Entity
 @Table(name = "student")
 public class Student implements Serializable {
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+    @Column(name="id")
     private Integer id;
+
+    @Column(name="age")
     private Integer age;
+
+    @Column(name="name", length = 255)
     private String name;
 
     public Student() {
@@ -24,10 +31,6 @@ public class Student implements Serializable {
         this.age = age;
     }
 
-    @GenericGenerator(name = "generator", strategy = "increment")
-    @Id
-    @GeneratedValue(generator = "generator")
-    @Column(name = "id", unique = true, nullable = false)
     public Integer getId() {
         return id;
     }
@@ -48,6 +51,15 @@ public class Student implements Serializable {
     @Column(name = "name", length = 255)
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                '}';
     }
 
     public void setName(String name) {
