@@ -1,1 +1,31 @@
-/target/
+#  Global #
+*.class
+*.jar
+*.war
+*.ear
+
+# eqphonious [eclipse / intellij] #
+.project
+.settings
+.classpath
+target
+
+# core [eclipse / intellij] #
+core\.settings
+core\.project
+core\.classpath
+core\target
+core/.settings
+core/.project
+core/.classpath
+core/target
+
+# home [eclipse / intellij] #
+home\.settings
+home\.project
+home\.classpath
+home\target
+home/.settings
+home/.project
+home/.classpath
+home/target
