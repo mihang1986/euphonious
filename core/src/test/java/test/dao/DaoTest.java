@@ -4,9 +4,11 @@ import com.sao.euphonious.core.dao.IStudentDao;
 import com.sao.euphonious.core.dao.StudentDao;
 import com.sao.euphonious.core.entity.Student;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.AbstractTransactionalJUnit4SpringContextTests;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -14,6 +16,7 @@ import java.util.List;
 /**
  * Created by navia on 2015/2/5.
  */
+//@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:hibernate-context.xml"})
 public class DaoTest extends AbstractTransactionalJUnit4SpringContextTests {
 
