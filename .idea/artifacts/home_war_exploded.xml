@@ -29,8 +29,6 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.34" />
-          <element id="library" level="project" name="Maven: junit:junit:4.12" />
-          <element id="library" level="project" name="Maven: org.hamcrest:hamcrest-core:1.3" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:18.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.1.4.RELEASE" />
@@ -46,7 +44,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="D:\program\IdeaProjects\euphonious\home\target/MANIFEST.MF" />
+        <element id="file-copy" path="D:\Works\IdeaProjects\euphonious\home\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="home/web/Web" />
     </root>

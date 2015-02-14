@@ -30,12 +30,12 @@ home/.project
 home/.classpath
 home/target
 
-# log [eclipse / intellij] #
-log\.settings
-log\.project
-log\.classpath
-log\target
-log/.settings
-log/.project
-log/.classpath
-log/target
+# service [eclipse / intellij] #
+service\.settings
+service\.project
+service\.classpath
+service\target
+service/.settings
+service/.project
+service/.classpath
+service/target
