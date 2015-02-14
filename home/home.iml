@@ -16,7 +16,11 @@
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="web springMVCDispatcherServlet servlet context" name="MVC springMVCDispatcherServlet servlet context" removed="true">
+          <file>file://$MODULE_DIR$/src/main/resources/springmvc-context.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">

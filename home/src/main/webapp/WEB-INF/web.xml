@@ -30,6 +30,18 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <!-- spring监听器 加载其他spring配置 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>
+            <!--加载多个spring配置文件以(,)分割 -->
+            classpath:hibernate-context.xml
+        </param-value>
+    </context-param>
+
     <!-- log4j配置 -->
     <context-param>
         <param-name>log4jConfigLocation</param-name>

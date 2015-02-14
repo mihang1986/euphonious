@@ -9,8 +9,43 @@
       http://www.springframework.org/schema/mvc  
       http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
+	<!--
+		<context:annotation-config/>
+		该注解功能用于自动注册
+			<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>
+				AutowiredAnnotationBeanPostProcessor (@Autowired),
+
+			<bean class="org.springframework.beans.factory.annotation.CommonAnnotationBeanPostProcessor"/>
+				CommonAnnotationBeanPostProcessor (@Resource, @PostConstruct, @PreDestroy),
+
+			<bean class="org.springframework.beans.factory.annotation.PersistenceAnnotationBeanPostProcessor"/>
+				PersistenceAnnotationBeanPostProcessor (@PersistenceContext),
+
+			<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>
+				RequiredAnnotationBeanPostProcessor (@Required)
+		注册这4个 BeanPostProcessor的作用，就是为了你的系统能够识别相应的注解。
+
+		但是如果使用 <context:component-scan/> 之后,该配置会自动注册上述4个Bean,
+		所以就不需要再配置<context:annotation-config/> 了
+	-->
+
 	<!-- 配置扫瞄注解 -->
+	<!--
+		base-package 要扫描的基础包(包含所有子包),
+		use-default-filters="false" 表示关闭默认的过滤器,
+		只有当关闭了默认的过滤器以后,context:include-filter才能正确生效
+	-->
 	<context:component-scan base-package="com.sao.euphonious.core" use-default-filters="false">
+		<!--
+			<context:include-filter/> 以及 <context:exclude-filter/>
+		 	设置过滤条件 只有符合条件的类才会被容器所管理
+		 	Filter Type   |  Examples Expression         |  Description
+			annotation    |  org.example.SomeAnnotation  |  符合SomeAnnoation的target class
+			assignable    |  org.example.SomeClass       |  指定class或interface的全名
+			aspectj       |  org.example..*Service+      |  AspectJ語法
+			regex         |  org\.example\.Default.*     |  Regelar Expression
+			custom        |  org.example.MyTypeFilter    |  Spring3新增自訂Type，實作org.springframework.core.type.TypeFilter
+		 -->
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
 	</context:component-scan>
 
