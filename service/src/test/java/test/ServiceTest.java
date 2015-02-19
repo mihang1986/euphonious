@@ -4,6 +4,7 @@ import com.sao.euphonious.core.dao.IStudentDao;
 import com.sao.euphonious.core.entity.Student;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
@@ -21,6 +22,7 @@ import javax.annotation.Resource;
 public class ServiceTest {
 
     @Resource(name = "studentDao")
+    //@Autowired
     private IStudentDao studentDao;
 
     @Test
